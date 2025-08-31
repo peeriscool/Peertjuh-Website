@@ -145,9 +145,9 @@
 					<br>
 						<h2>Other projects</h2>
 							<section class="tiles">
-								<article class="style2">
+								<article class="style6">
 									<span class="image">
-										<img src="images/pic07.jpg" alt="" />
+										<img src="images/pic06.jpg" alt="" />
 									</span>
 									<a href="https://smos-bois.itch.io/blob-the-builder">
 										<h2>Blob The Builder</h2>
@@ -156,9 +156,9 @@
 										</div>
 									</a>
 								</article>
-								<article class="style3">
+								<article class="style5">
 									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
+										<img src="images/pic05.jpg" alt="" />
 									</span>
 									<a href="https://www.instructables.com/member/peerlomans/">
 										<h2>MicroController projects</h2>
@@ -167,9 +167,9 @@
 										</div>
 									</a>
 								</article>
-								<article class="style1">
+								<article class="style4">
 									<span class="image">
-										<img src="images/pic09.jpg" alt="" />
+										<img src="images/pic04.jpg" alt="" />
 									</span>
 									<a href="https://www.behance.net/PeerLomans">
 										<h2>Photography and Video work</h2>
@@ -178,9 +178,9 @@
 										</div>
 									</a>
 								</article>
-								<article class="style5">
+								<article class="style3">
 									<span class="image">
-										<img src="images/pic10.jpg" alt="" />
+										<img src="images/pic03.jpg" alt="" />
 									</span>
 									<a href="https://github.com/peeriscool/UnityTool">
 										<h2>Unity Level editor</h2>
@@ -189,9 +189,9 @@
 										</div>
 									</a>
 								</article>
-								<article class="style6">
+								<article class="style2">
 									<span class="image">
-										<img src="images/pic11.jpg" alt="" />
+										<img src="images/pic02.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>3D models</h2>
@@ -200,9 +200,9 @@
 										</div>
 									</a>
 								</article>
-								<article class="style4">
+								<article class="style1">
 									<span class="image">
-										<img src="images/pic12.jpg" alt="" />
+										<img src="images/pic01.jpg" alt="" />
 									</span>
 									<a href="https://www.mooischijndel.nl/nieuws/carnaval/20948/foto-s-van-de-mjoezikul-van-schorsbos">
 										<h2>Theatere work</h2>
@@ -239,7 +239,63 @@
 						<div class="inner">
 							<section>
 								<h2>Get in touch &#127824;&#128151;&#127918;</h2>
-								<form method="post" action="#">
+								<form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="f39b241b-a178-4451-9297-132048a5f515">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <div class="field half">
+    <input type="text" name="name" id="name" placeholder="Name" required >
+    </div>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+    <textarea name="message" id="message" placeholder="Message" required></textarea>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+	<br>
+    <button type="submit">Submit Form</button>
+
+</form>
+<!--
+
+
+-->
+<p id="form-status" style="display:none;"></p>
+<script>
+const form = document.querySelector('form[action="https://api.web3forms.com/submit"]');
+const statusEl = document.getElementById('form-status');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('[type="submit"]');
+  const original = btn.value || btn.textContent;
+  if (btn.value !== undefined) btn.value = 'Versturen...'; else btn.textContent = 'Versturen...';
+  btn.disabled = true; statusEl.style.display = 'none';
+
+  try {
+    const r = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+    const json = await r.json();
+    statusEl.style.display = 'block';
+    if (json.success) {
+      statusEl.textContent = 'Bedankt! Je bericht is verstuurd.';
+      form.reset();
+    } else {
+      statusEl.textContent = 'Er ging iets mis: ' + (json.message || r.statusText);
+    }
+  } catch (err) {
+    statusEl.style.display = 'block';
+    statusEl.textContent = 'Netwerkfout, probeer later opnieuw.';
+  } finally {
+    if (btn.value !== undefined) btn.value = original; else btn.textContent = original;
+    btn.disabled = false;
+  }
+});
+</script>
+								<!-- <form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" />
@@ -254,7 +310,7 @@
 									<ul class="actions">
 										<li><input type="submit" value="Send" class="primary" /></li>
 									</ul>
-								</form>
+								</form> -->
 							</section>
 							<ul class="copyright">
 								<li>&copy; Peer Lomans. All rights reserved</li><li>Based on a design template from: <a href="http://html5up.net">HTML5 UP</a></li>
