@@ -35,6 +35,7 @@ body {
 
 ol, ul {
 	list-style: none;
+	font-size: 1.2em;
 }
 
 blockquote, q {
@@ -71,7 +72,9 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* Basic */
 
 	@-ms-viewport {
@@ -163,8 +166,8 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
-		font-size: 1.5em;
+		margin: 0 0 1em 0;
+		font-size: 1.2em;
 	}
 
 	h1 {
@@ -199,7 +202,7 @@ input, select, textarea {
 	h2, h3, h4, h5, h6 {
 		font-weight: 900;
 		line-height: 1.5;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 		text-transform: uppercase;
 		letter-spacing: 0.35em;
 	}
