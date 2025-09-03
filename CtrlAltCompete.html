@@ -61,9 +61,77 @@
 							<div class="container">
 							<iframe class="responsive-iframe" src="https://www.youtube.com/embed/EGogHyWQZG0?si=Zo7Rc-o8GpW6igbf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							</div>
+						
+						<!-- ---------------------------------------------------------------------------------------------------------------------->
+						<br>
+						<p style="padding-left: 42% ">Click Image for gallery </p>
+						<div class="row">
+ 							<div class="column">
+   								<img src="images/CtrlAltCompete/games.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" style=" max-width: 500%;">
+ 							</div>
 						</div>
+						<!-- The Modal/Lightbox -->
+						<div id="myModal" class="modal">
+						  <span class="close cursor" onclick="closeModal()">&times;</span>
+						  <div class="modal-content">
 
-					</div>
+						    <div class="mySlides">
+						      <div class="numbertext">1 / 5</div>
+						      <img src="images/CtrlAltCompete/games.jpg" style="width:100%">
+						    </div>
+
+						    <div class="mySlides">
+						      <div class="numbertext">2 / 5</div>
+						      <img src="images/CtrlAltCompete/android.jpg" style="width:100%">
+						    </div>
+
+						    <div class="mySlides">
+						      <div class="numbertext">3 / 5</div>
+						      <img src="images/CtrlAltCompete/Polonaise.png" style="width:100%">
+						    </div>
+
+						    <div class="mySlides">
+						      <div class="numbertext">4 / 5</div>
+						      <img src="images/CtrlAltCompete/ghost.png" style="width:100%">
+						    </div>
+						 <div class="mySlides">
+						      <div class="numbertext">5 / 5</div>
+						      <img src="images/CtrlAltCompete/minigolf.png" style="width:100%">
+						    </div>
+						    <!-- Next/previous controls -->
+						    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						    <!-- Caption text -->
+						    <div class="caption-container">
+						      <p id="caption"></p>
+						    </div>
+
+						    <!-- Thumbnail image controls -->
+						    <div class="column">
+						      <img class="demo" src="images/CtrlAltCompete/games.jpg" onclick="currentSlide(1)" alt="CtrlAltCompete" style="width:50%">
+						    </div>
+
+						    <div class="column">
+						      <img class="demo" src="images/CtrlAltCompete/android.jpg" onclick="currentSlide(2)" alt="CtrlAltCompete" style="width:50%">
+						    </div>
+
+						    <div class="column">
+						      <img class="demo" src="images/CtrlAltCompete/Polonaise.png" onclick="currentSlide(3)" alt="CtrlAltCompete" style="width:50%">
+						    </div>
+
+						    <div class="column">
+						      <img class="demo" src="images/CtrlAltCompete/ghost.png" onclick="currentSlide(4)" alt="CtrlAltCompete"style="width:50%">
+						    </div>
+						       <div class="column">
+						      <img class="demo" src="images/CtrlAltCompete/minigolf.png" onclick="currentSlide(5)" alt="CtrlAltCompete"style="width:50%">
+						    </div>
+						  </div><!-- modal content-->
+						  </div><!-- modal-->
+						</div> <!-- Inner-->
+						    
+					</div> <!-- main-->
+				</div> <!-- wrapper-->
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -114,6 +182,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/modal.js"></script>
 	</body>
 </html>

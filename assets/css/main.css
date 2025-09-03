@@ -3355,6 +3355,7 @@ html {
 /* modal image box */
 .row > .column {
   padding: 0 8px;
+
 }
 
 .row:after {
@@ -3381,6 +3382,7 @@ html {
   height: 100%;
   overflow: auto;
   background-color: black;
+
 }
 
 /* Modal Content */
@@ -3398,7 +3400,7 @@ html {
   color: white;
   position: absolute;
   top: 10px;
-  right: 25px;
+  left: 25px;
   font-size: 35px;
   font-weight: bold;
 }
